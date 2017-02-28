@@ -1,0 +1,15 @@
+
+
+    <div class="col-md-6">
+        <form name="ContactForm">
+            <div class="form-group has-feedback" data-ng-class="ContactForm.roleName.$valid ? 'has-success' : (ContactForm.roleName.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="roleName">Role Name:</label>
+                <input id="roleName" name="roleName" type="text" data-ng-model="RC.contact.roleName" class="form-control" required />
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.roleName.$valid ? 'glyphicon-ok' : (ContactForm.roleName.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
+
+            <button id="save-btn" class="btn btn-success" data-ng-click="RC.update(RC.contact)" data-ng-disabled="ContactForm.$invalid">Save <span class="glyphicon glyphicon-ok"></span></button>
+        </form>
+    </div>
+<pre>form = {{RC.contact| json}}</pre>
+<pre id="contactForm">contactForm = {{RC.contactForm| json}}</pre>
